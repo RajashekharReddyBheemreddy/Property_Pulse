@@ -11,7 +11,7 @@ type Props = {
 
 export default function BookmarkButton({ property }: Props) {
   const { data: session } = useSession();
-  const userId = session?.user?.id;
+  const userId = session?.user?.email;
 
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [loading, setLoading] = useState(true);
